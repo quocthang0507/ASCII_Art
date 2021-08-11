@@ -26,11 +26,11 @@ namespace ASCII_Art_CSharp
 			}
 			Console.WriteLine("CHƯƠNG TRÌNH VẼ TRANH ASCII TỪ HÌNH ẢNH");
 
-			string inputArg = GetAgrumentByName(arguments, "-i");
-			string outputArg = GetAgrumentByName(arguments, "-o");
-			string charsetArg = GetAgrumentByName(arguments, "-c");
-			string widthArg = GetAgrumentByName(arguments, "-w");
-			string heightArg = GetAgrumentByName(arguments, "-h");
+			string inputArg = GetArgumentByName(arguments, "-i");
+			string outputArg = GetArgumentByName(arguments, "-o");
+			string charsetArg = GetArgumentByName(arguments, "-c");
+			string widthArg = GetArgumentByName(arguments, "-w");
+			string heightArg = GetArgumentByName(arguments, "-h");
 
 			if (inputArg == string.Empty || outputArg == string.Empty)
 			{
@@ -62,7 +62,7 @@ namespace ASCII_Art_CSharp
 			return 0;
 		}
 
-		static string GetAgrumentByName(string[] args, string name)
+		static string GetArgumentByName(string[] args, string name)
 		{
 			int index = Array.FindIndex(args, a => a.Equals(name, StringComparison.OrdinalIgnoreCase));
 			return index == -1 || index + 1 >= args.Length ? string.Empty : args[index + 1];
