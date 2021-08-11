@@ -2,10 +2,11 @@ import sys
 import os
 import imghdr
 import math
+import PIL
 
 from PIL import Image
 
-AsciiChars = {"#", "#", "@", "%", "=", "+", "*", ":", "-", ".", " "}
+AsciiChars = ["#", "#", "@", "%", "=", "+", "*", ":", "-", ".", " "]
 BLACK = "@"
 CHARCOAL = "#"
 DARKGRAY = "8"
@@ -62,15 +63,15 @@ def image_to_ascii(image: Image, charset: int = 1):
     for h in range(height):
         for w in range(width):
             pixel_color = image.getpixel((w, h))
-            red = sum(pixel_color) / 3
-            green = sum(pixel_color) / 3
-            blue = sum(pixel_color) / 3
+            red = int(sum(pixel_color) / 3)
+            green = int(sum(pixel_color) / 3)
+            blue = int(sum(pixel_color) / 3)
             gray_color = (red, green, blue)
 
             if not toggle:
                 char = ''
                 if charset == 1:
-                    char = AsciiChars[(gray_color[0] * 10) / 255]
+                    char = AsciiChars[int((gray_color[0] * 10) / 255)]
                 elif charset == 2:
                     char = get_gray_shade(gray_color[0])
                 line.append(char)
@@ -80,6 +81,7 @@ def image_to_ascii(image: Image, charset: int = 1):
             toggle = True
         else:
             toggle = False
+    return result
 
 
 def get_gray_shade(red: int):
@@ -107,17 +109,18 @@ def image_to_ascii_file(image: Image, charset: int, filename: str):
     ascii = image_to_ascii(image, charset)
     print('Đã tạo xong nội dung ASCII từ hình ảnh.')
     try:
-        file = open(filename, 'w+')
-        for line in ascii:
-            file.writelines(''.join(line))
-        file.close()
+        with open(filename, 'w') as file:
+            for line in ascii:
+                file.write(''.join(line))
+                file.write('\n')
+        print('Đã ghi xong nội dung ASCII vào tập tin {}'.format(filename))
     except:
         print('Lỗi: Không thể chuyển hình ảnh thành tập tin văn bản được. Có thể từ tên tập tin đầu ra không hợp lệ. Hãy thử lại với tên khác.')
 
 
 def get_agrument_by_name(arguments: list, name: str):
     index = -1
-    for i in range(0, len(arguments)):
+    for i in range(len(arguments)):
         if arguments[i].lower() == name.lower():
             index = i
             break
@@ -129,7 +132,7 @@ if __name__ == "__main__":
     if len(arguments) == 1 or arguments[1].lower() == '-h':
         print("Vui lòng thêm các đối số vào sau chương trình này.")
         print(
-            "\nAsciiArt -i \"đường dẫn đến tập tin hình ảnh\" -o \"đường dẫn đến tập tin văn bản\" [-c mã_bộ_ký_tự] [-w chiều_rộng] [-h chiều_cao]\n")
+            "\npython program.py -i \"đường dẫn đến tập tin hình ảnh\" -o \"đường dẫn đến tập tin văn bản\" [-c mã_bộ_ký_tự] [-w chiều_rộng] [-h chiều_cao]\n")
         print("Trong đó:")
         print("-i tên hoặc đường dẫn đến tập tin hình ảnh bắt buộc.")
         print("-o tên hoặc đường dẫn đến tập tin văn bản đầu ra bắt buộc.")
@@ -155,11 +158,11 @@ if __name__ == "__main__":
             width = int_try_parse(widthArg)
             height = int_try_parse(heightArg)
             charset = int_try_parse(charsetArg)
-            if widthArg == None or width:
+            if width == None:
                 width = 0
-            if heightArg == None or height:
+            if height == None:
                 height = 0
-            if charsetArg == None or charset:
+            if charset == None:
                 charset = 1
             image = Image.open(inputArg)
             image = resize_image(image, width, height)
