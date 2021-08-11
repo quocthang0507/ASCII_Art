@@ -42,11 +42,6 @@ namespace ArtLib
 			return result;
 		}
 
-		/// <summary>
-		/// https://www.c-sharpcorner.com/article/generating-ascii-art-from-an-image-using-C-Sharp/
-		/// </summary>
-		/// <param name="image"></param>
-		/// <returns></returns>
 		public static string ToAscii(this Bitmap image, int charset = 1)
 		{
 			bool toggle = false;
@@ -63,11 +58,13 @@ namespace ArtLib
 
 					if (!toggle)
 					{
+						// https://www.c-sharpcorner.com/article/generating-ascii-art-from-an-image-using-C-Sharp/
 						string @char = string.Empty;
 						if (charset == 1)
 						{
 							@char = AsciiChars[(grayColor.R * 10) / 255];
 						}
+						// https://www.codeproject.com/Articles/20435/Using-C-To-Generate-ASCII-Art-From-An-Image
 						else if (charset == 2)
 						{
 							@char = GetGrayShade(grayColor.R);
