@@ -70,8 +70,10 @@ def image_to_ascii(image: Image, charset: int = 1):
 
             if not toggle:
                 char = ''
+                # https://www.c-sharpcorner.com/article/generating-ascii-art-from-an-image-using-C-Sharp/
                 if charset == 1:
                     char = AsciiChars[int((gray_color[0] * 10) / 255)]
+                # https://www.codeproject.com/Articles/20435/Using-C-To-Generate-ASCII-Art-From-An-Image
                 elif charset == 2:
                     char = get_gray_shade(gray_color[0])
                 line.append(char)

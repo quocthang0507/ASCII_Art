@@ -9,22 +9,59 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArtLib", "ArtLib\ArtLib.csp
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "ASCII_Art_Python", "ASCII_Art_Python\ASCII_Art_Python.pyproj", "{A7581129-6946-41C3-A593-B8337F4D40CD}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ASCII_Art_Cpp", "ASCII_Art_Cpp\ASCII_Art_Cpp.vcxproj", "{4E1EBE05-170A-4161-9B09-EC291C891C74}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{9C1021BC-CD51-472B-90F5-F0DFA6D542AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9C1021BC-CD51-472B-90F5-F0DFA6D542AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C1021BC-CD51-472B-90F5-F0DFA6D542AC}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9C1021BC-CD51-472B-90F5-F0DFA6D542AC}.Debug|x64.Build.0 = Debug|Any CPU
+		{9C1021BC-CD51-472B-90F5-F0DFA6D542AC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9C1021BC-CD51-472B-90F5-F0DFA6D542AC}.Debug|x86.Build.0 = Debug|Any CPU
 		{9C1021BC-CD51-472B-90F5-F0DFA6D542AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C1021BC-CD51-472B-90F5-F0DFA6D542AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C1021BC-CD51-472B-90F5-F0DFA6D542AC}.Release|x64.ActiveCfg = Release|Any CPU
+		{9C1021BC-CD51-472B-90F5-F0DFA6D542AC}.Release|x64.Build.0 = Release|Any CPU
+		{9C1021BC-CD51-472B-90F5-F0DFA6D542AC}.Release|x86.ActiveCfg = Release|Any CPU
+		{9C1021BC-CD51-472B-90F5-F0DFA6D542AC}.Release|x86.Build.0 = Release|Any CPU
 		{AF320C4C-4DC3-4A40-B598-D69BCC53413D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AF320C4C-4DC3-4A40-B598-D69BCC53413D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF320C4C-4DC3-4A40-B598-D69BCC53413D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{AF320C4C-4DC3-4A40-B598-D69BCC53413D}.Debug|x64.Build.0 = Debug|Any CPU
+		{AF320C4C-4DC3-4A40-B598-D69BCC53413D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{AF320C4C-4DC3-4A40-B598-D69BCC53413D}.Debug|x86.Build.0 = Debug|Any CPU
 		{AF320C4C-4DC3-4A40-B598-D69BCC53413D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF320C4C-4DC3-4A40-B598-D69BCC53413D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF320C4C-4DC3-4A40-B598-D69BCC53413D}.Release|x64.ActiveCfg = Release|Any CPU
+		{AF320C4C-4DC3-4A40-B598-D69BCC53413D}.Release|x64.Build.0 = Release|Any CPU
+		{AF320C4C-4DC3-4A40-B598-D69BCC53413D}.Release|x86.ActiveCfg = Release|Any CPU
+		{AF320C4C-4DC3-4A40-B598-D69BCC53413D}.Release|x86.Build.0 = Release|Any CPU
 		{A7581129-6946-41C3-A593-B8337F4D40CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7581129-6946-41C3-A593-B8337F4D40CD}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A7581129-6946-41C3-A593-B8337F4D40CD}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{A7581129-6946-41C3-A593-B8337F4D40CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7581129-6946-41C3-A593-B8337F4D40CD}.Release|x64.ActiveCfg = Release|Any CPU
+		{A7581129-6946-41C3-A593-B8337F4D40CD}.Release|x86.ActiveCfg = Release|Any CPU
+		{4E1EBE05-170A-4161-9B09-EC291C891C74}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{4E1EBE05-170A-4161-9B09-EC291C891C74}.Debug|Any CPU.Build.0 = Debug|Win32
+		{4E1EBE05-170A-4161-9B09-EC291C891C74}.Debug|x64.ActiveCfg = Debug|x64
+		{4E1EBE05-170A-4161-9B09-EC291C891C74}.Debug|x64.Build.0 = Debug|x64
+		{4E1EBE05-170A-4161-9B09-EC291C891C74}.Debug|x86.ActiveCfg = Debug|Win32
+		{4E1EBE05-170A-4161-9B09-EC291C891C74}.Debug|x86.Build.0 = Debug|Win32
+		{4E1EBE05-170A-4161-9B09-EC291C891C74}.Release|Any CPU.ActiveCfg = Release|Win32
+		{4E1EBE05-170A-4161-9B09-EC291C891C74}.Release|x64.ActiveCfg = Release|x64
+		{4E1EBE05-170A-4161-9B09-EC291C891C74}.Release|x64.Build.0 = Release|x64
+		{4E1EBE05-170A-4161-9B09-EC291C891C74}.Release|x86.ActiveCfg = Release|Win32
+		{4E1EBE05-170A-4161-9B09-EC291C891C74}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
